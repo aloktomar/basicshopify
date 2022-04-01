@@ -31,6 +31,18 @@
     <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
   {%- endif -%}
   
+  
+  
+  
+  
+   
+            {%- assign current_variant = product.selected_or_first_available_variant -%}
+{% if current_variant.featured_image %}
+  {% assign page_image = current_variant.featured_image %}
+{% endif %}
+  
+  
+  
 
   <div class="slick-slide-wrap">
           <ul id=" " class=" slick-slide1" role="list">
@@ -62,7 +74,11 @@
                 </li>
               
             {%- endfor -%}
-          </ul>    
+           </ul>  
+    
+    
+    
+    
       <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants ">
   {% for variant in product.variants %}
     {% if variant.available %}
