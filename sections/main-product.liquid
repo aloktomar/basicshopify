@@ -68,19 +68,7 @@
                   </script>
 </variant-radios>
   
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-  <script>
-    
-    $('.slick-slide1').slick({
-        slidesToShow: 1, 
-        slidesToScroll: 1,
-        //autoplay: true,
-       // autoplaySpeed: 2000,
-        dots: true
-    });
-  </script>
 
 
   <div class="oooooo product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
@@ -1159,3 +1147,18 @@ console.log(variantSwitcher);
   ]
 }
 {% endschema %}
+
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script>
+    
+    $('.slick-slide1').slick({
+        slidesToShow: 1, 
+        slidesToScroll: 1,
+        //autoplay: true,
+       // autoplaySpeed: 2000,
+        dots: true
+    });
+  </script>
