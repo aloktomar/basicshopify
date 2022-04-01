@@ -1126,7 +1126,9 @@ console.log(variantSwitcher);
        // autoplaySpeed: 2000,
         dots: true
     });
-    
+    $(".product-form__input label").click(function(){
+ 		console.log($(this).attr("data-lab").val())
+    });
     
     $('.slider').slick('slickGoTo', number);
   </script>
