@@ -40,7 +40,7 @@
   {%- for ver in product.variants -%}
 <!--   <code>{{ ver.featured_image.src | json}}</code> -->
   
-  <img src="{{ ver.featured_image.src | image_url: width: 600 }} ">
+  <img id="{{ ver.featured_image.id}}" src="{{ ver.featured_image.src | image_url: width: 600 }} ">
 
    {%- endfor -%}
   <div class="slick-slide-wrap">
