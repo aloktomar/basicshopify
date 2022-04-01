@@ -52,7 +52,11 @@
           {% if media.preview_image.width >= 1946 %}{{ media.preview_image | image_url: width: 1946 }} 1946w,{% endif %}
           {{ media.preview_image | image_url }} {{ media.preview_image.width }}w"
         src="{{ media | image_url: width: 1946 }}"
-         
+         style="    max-height: 500px;
+    object-fit: cover!important;
+    height: 100%;
+    width: 100% !important;
+    max-width: 500px;"
       >
                 </li>
               
