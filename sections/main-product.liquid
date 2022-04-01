@@ -1125,8 +1125,8 @@ console.log(variantSwitcher);
         //autoplay: true,
        // autoplaySpeed: 2000,
         dots: true
-    });
-    $(".product-form__input label").click(function(){
+    }); 
+      $(document).on("click",".product-form__input label" , function(){
  		const slick_num = $(this).attr("data-lab");
       $('.slick-slide1').slick('slickGoTo', slick_num);
     });
