@@ -65,6 +65,18 @@
     
   </div>
   
+  
+  
+  <script>
+    
+    $('.slider__slide ').slick({
+        slidesToShow: 1, 
+        slidesToScroll: 1,
+        //autoplay: true,
+       // autoplaySpeed: 2000,
+        dots: true
+    });
+  </script>
   <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants no-js">
   {% for variant in product.variants %}
     {% if variant.available %}
