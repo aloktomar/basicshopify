@@ -40,7 +40,7 @@
   {%- for ver in product.variants -%}
 <!--   <code>{{ ver.featured_image.src | json}}</code> -->
   
-    <li><img id="{{ ver.featured_image.id}}" src="{{ ver.featured_image.src | image_url: width: 600 }} "></li>
+    <li><img id="{{ ver.featured_image.id}}" src="{{ ver.featured_image.src | image_url: width: 600 }} " style="max-height:400px"></li>
 
    {%- endfor -%}
     
