@@ -31,7 +31,8 @@
     <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
   {%- endif -%}
   
-  
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
   <div class="slick-slide">
           <ul id="Slider-Gallery-{{ section.id }}" class="product__media-list contains-media slick-slide" role="list">
         
@@ -66,7 +67,8 @@
   </div>
   
   
-  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
   <script>
     
     $('.slider__slide ').slick({
