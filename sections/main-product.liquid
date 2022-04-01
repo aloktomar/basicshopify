@@ -35,23 +35,13 @@
   
   
   
-   
-            {%- assign current_variant = product.selected_or_first_available_variant -%}
-				{% if current_variant.featured_image %}
-  			{% assign page_image = current_variant.featured_image %}
-  
-  
-  
-  <code>{{ product.variants.title | json}}</code> 
-{% endif %}
-  
-  
+   <code>{{ product.variants.title | json}}</code> 
   
 
   <div class="slick-slide-wrap">
           <ul id=" " class=" slick-slide1" role="list">
             
- 
+ <code>{{ product.media | json}}</code>
             {%- for media in product.media -%}
             
                 <li data-img-id="{{  media.id | json}}" id="Slide-{{ section.id }}-{{ media.id }}" class="22222 product__media-item grid__item slider__slide ">
