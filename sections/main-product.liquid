@@ -63,7 +63,17 @@
               
             {%- endfor -%}
           </ul>    
-    
+      <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants no-js">
+  {% for variant in product.variants %}
+    {% if variant.available %}
+      <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+        {{ variant.title }}
+      </option>
+    {% else %}
+      <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+    {% endif %}
+  {% endfor %}
+  </select>
   </div>
   
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -79,17 +89,7 @@
         dots: true
     });
   </script>
-  <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants no-js">
-  {% for variant in product.variants %}
-    {% if variant.available %}
-      <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
-        {{ variant.title }}
-      </option>
-    {% else %}
-      <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
-    {% endif %}
-  {% endfor %}
-  </select>
+
 
   <div class="oooooo product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
