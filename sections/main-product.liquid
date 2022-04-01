@@ -35,9 +35,12 @@
   
   
   
-   <code>{{ product.variants.title | json}}</code> 
+   
   
+  {%- for ver in product.variants -%}
+  <code>{{ ver.id | json}}</code> 
 
+   {%- endfor -%}
   <div class="slick-slide-wrap">
           <ul id=" " class=" slick-slide1" role="list">
             
