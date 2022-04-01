@@ -45,42 +45,7 @@
    {%- endfor -%}
     
   </ul>
-  <div class="slick-slide-wrap">
-          <ul id=" " class=" slick-slide1" role="list">
-            
-<!--  <code>{{ product.media | json}}</code> -->
-            {%- for media in product.media -%}
-            
-                <li data-img-id="{{  media.id | json}}" id="Slide-{{ section.id }}-{{ media.id }}" class="22222 product__media-item grid__item slider__slide ">
-                   <img
-        srcset="{% if media.preview_image.width >= 493 %}{{ media.preview_image | image_url: width: 493 }} 493w,{% endif %}
-          {% if media.preview_image.width >= 600 %}{{ media.preview_image | image_url: width: 600 }} 600w,{% endif %}
-          {% if media.preview_image.width >= 713 %}{{ media.preview_image | image_url: width: 713 }} 713w,{% endif %}
-          {% if media.preview_image.width >= 823 %}{{ media.preview_image | image_url: width: 823 }} 823w,{% endif %}
-          {% if media.preview_image.width >= 990 %}{{ media.preview_image | image_url: width: 990 }} 990w,{% endif %}
-          {% if media.preview_image.width >= 1100 %}{{ media.preview_image | image_url: width: 1100 }} 1100w,{% endif %}
-          {% if media.preview_image.width >= 1206 %}{{ media.preview_image | image_url: width: 1206 }} 1206w,{% endif %}
-          {% if media.preview_image.width >= 1346 %}{{ media.preview_image | image_url: width: 1346 }} 1346w,{% endif %}
-          {% if media.preview_image.width >= 1426 %}{{ media.preview_image | image_url: width: 1426 }} 1426w,{% endif %}
-          {% if media.preview_image.width >= 1646 %}{{ media.preview_image | image_url: width: 1646 }} 1646w,{% endif %}
-          {% if media.preview_image.width >= 1946 %}{{ media.preview_image | image_url: width: 1946 }} 1946w,{% endif %}
-          {{ media.preview_image | image_url }} {{ media.preview_image.width }}w"
-        src="{{ media | image_url: width: 1946 }}"
-         style="    max-height: 500px;
-    object-fit: cover!important;
-    height: 100%;
-    width: 100% !important;
-    max-width: 500px;"
-      >
-                </li>
-              
-            {%- endfor -%}
-           </ul>  
-    
-    
-    
-    
-      <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants ">
+  <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants ">
   {% for variant in product.variants %}
     {% if variant.available %}
       <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
@@ -91,7 +56,6 @@
     {% endif %}
   {% endfor %}
   </select>
-  </div>
   
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
