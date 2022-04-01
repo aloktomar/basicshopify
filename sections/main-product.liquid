@@ -34,10 +34,10 @@
 
   <div class="slick-slide-wrap">
           <ul id=" " class=" slick-slide1" role="list">
-        
+        {{ product.media | json}}
  
             {%- for media in product.media -%}
-            {{media | json}}
+            
                 <li id="Slide-{{ section.id }}-{{ media.id }}" class="22222 product__media-item grid__item slider__slide ">
                    <img
         srcset="{% if media.preview_image.width >= 493 %}{{ media.preview_image | image_url: width: 493 }} 493w,{% endif %}
