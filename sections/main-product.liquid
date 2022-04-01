@@ -36,13 +36,15 @@
   
   
    
-  
+  <ul id=" " class=" slick-slide1" role="list">
   {%- for ver in product.variants -%}
 <!--   <code>{{ ver.featured_image.src | json}}</code> -->
   
-  <img id="{{ ver.featured_image.id}}" src="{{ ver.featured_image.src | image_url: width: 600 }} ">
+    <li><img id="{{ ver.featured_image.id}}" src="{{ ver.featured_image.src | image_url: width: 600 }} "></li>
 
    {%- endfor -%}
+    
+  </ul>
   <div class="slick-slide-wrap">
           <ul id=" " class=" slick-slide1" role="list">
             
