@@ -32,9 +32,9 @@
   {%- endif -%}
   
 
-  <div class="slick-slide-wrap">
+  <div class="slick-slide-wrap"><code>{{ product.media | json}}</code>
           <ul id=" " class=" slick-slide1" role="list">
-            <code>{{ product.media | json}}</code>
+            
  
             {%- for media in product.media -%}
             
